@@ -23,6 +23,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting k)/' ~/.zshrc
 
+# Removendo hostname e username
+echo DEFAULT_USER=`whoami` >> ~/.zshrc
+
 chsh -s $(which zsh)
 
 source .zshrc
